@@ -1,0 +1,35 @@
+table {
+    width: 100%;
+  }
+
+  .cursor{
+     cursor: pointer;
+  }
+
+  .top-right-actions {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+  }
+
+  ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+    padding: 0 !important; 
+}
+  
+//   button {
+//     margin-right: 10px;
+//   }
+  
+//   mat-form-field {
+//     // width: 100%;
+//   }
+  
+//   mat-select {
+//     display: flex;
+//     align-items: center;
+//   }
+  
+  input {
+    width: 100%;
+  }

@@ -1,0 +1,24 @@
+.modal-structure button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  
+    &:hover {
+      background-color: #006292;
+    }
+  }
+  
+  .modal-structure button.cancel {
+    background-color: #ccc;
+  }
+
+  .modal-structure__body textarea{
+    width: 100%;
+  }
+
+  .body{
+    width: 100%;
+  }

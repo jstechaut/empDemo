@@ -1,0 +1,15 @@
+<div class="modal-structure">
+    <div class="modal-structure__header">
+      <h2>Create new task</h2>
+    </div>
+    <div class="modal-structure__body">
+      <form [formGroup]="createForm" (ngSubmit)="submit()">
+        <textarea type="text" formControlName="task" placeholder="Enter your task"></textarea>
+        <div class="mt-2 d-flex justify-content-center">
+        <button type="button" (click)="close()" class="btn  mr-2">Cancel</button>
+        <button type="submit" class="btn">Submit</button>
+        </div>
+      </form>
+    </div>
+    <div class="modal-structure__footer"></div>
+  </div>
