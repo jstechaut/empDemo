@@ -12,6 +12,8 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   
   isLoading: boolean = false;
+  isWrongInput = false;
+  isDisabled = false;
 
   constructor(
     private fb: FormBuilder,
@@ -30,12 +32,20 @@ export class LoginComponent implements OnInit {
       if(this.loginForm.invalid){
         return;
       }
+      this.isDisabled = true;
       if(this.loginForm.value.username === 'fingent' && this.loginForm.value.password === 'fingent'){
-           this.router.navigate(['/emp']);
+           localStorage.setItem('empToken', '123456')
+           this.router.navigate(['/emp/dashboard']);
+      } else{
+        this.isDisabled = false;
+        this.isWrongInput = true;
+         setTimeout(()=>{
+          this.isWrongInput = false;
+         },3000)
       }
     // TODO: Implement login logic here.
 
-    this.isLoading = false;
+    
   }
 
 }

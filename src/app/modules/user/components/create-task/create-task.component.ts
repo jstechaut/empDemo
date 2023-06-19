@@ -25,15 +25,7 @@ export class CreateTaskComponent implements OnInit {
   }
 
   submit(){
-    console.log('good')
     this.dialogRef.close(
-      // {
-      //   id: 156,
-      //   title: this.createForm.value.task,
-      //   completed: false,
-      //   userId: 10
-      // }
-      
     {userId: 10, id: 200, title: this.createForm.value.task, completed: false}
     );
   }

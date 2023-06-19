@@ -11,6 +11,9 @@
 </div> -->
 
 <mat-card class="login-card">
+  <div class="alert alert-danger" role="alert" *ngIf="isWrongInput">
+    Wrong Credentials!!!
+  </div>
     <mat-card-title>Login</mat-card-title>
     <mat-card-content>
       <form [formGroup]="loginForm" (ngSubmit)="login()">
@@ -20,7 +23,7 @@
         <mat-form-field>
           <input matInput type="password" placeholder="Password" formControlName="password" name="password" required>
         </mat-form-field>
-        <button mat-raised-button color="primary">Login</button>
+        <button type="submit" mat-raised-button color="primary" [disabled]="isDisabled">Login</button>
       </form>
     </mat-card-content>
   </mat-card>

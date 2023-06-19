@@ -35,7 +35,6 @@ export class EmpTasksComponent implements OnInit {
 
   getUserTasks(id:string){
     this.userService.getUserTasks(id).subscribe(res =>{
-         console.log('res',res)
          this.dataSource = res;
          this.allData = res;
     },
@@ -50,20 +49,16 @@ export class EmpTasksComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe((result:any) => {
-      console.log(`Dialog result:`, result);
       if(result && result.title){
          this.allData.push(result)
          this.dataSource.push(result)
-         console.log(this.dataSource)
       }
     });
   }
 
 
   filterStatus(event:any){
-console.log(event)
 if(event.value === '1'){
-  console.log(this.dataSource)
   this.dataSource = this.allData.filter((res:any) => res.completed === true);
 } else if(event.value === '2'){
   this.dataSource = this.allData.filter((res:any) => res.completed === false);

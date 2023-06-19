@@ -38,7 +38,6 @@ export class DashboardComponent implements OnInit {
 
   getUsersList(){
     this.userService.getUsers().subscribe(res =>{
-         console.log('res',res)
          this.dataSource = res;
     },
     err =>{
@@ -48,7 +47,6 @@ export class DashboardComponent implements OnInit {
 
   getRecord(element:any){
     this.router.navigate(['/emp/tasks', element.id])
-    console.log(element)
   }
 
 }

@@ -7,12 +7,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { NotFoundComponent } from './components/not-found/not-found.component'
 const routes: Routes = [
   { path: '', component: LoginComponent }
 ];
 
 @NgModule({
-  declarations: [LoginComponent],
+  declarations: [LoginComponent, NotFoundComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -20,6 +22,7 @@ const routes: Routes = [
     MatFormFieldModule,
     MatInputModule,
     MatCardModule,
+    MatSnackBarModule,
     RouterModule.forChild(routes)
   ],
   exports: [RouterModule]

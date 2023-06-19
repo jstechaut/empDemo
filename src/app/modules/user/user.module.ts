@@ -9,19 +9,30 @@ import { MatSelectModule } from '@angular/material/select';
 import {MatDialogModule} from '@angular/material/dialog';
 import { CreateTaskComponent } from './components/create-task/create-task.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { UserComponent } from './user.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';
+import {MatListModule} from '@angular/material/list';
 const userRoutes: Routes = [
-  { path: '', component: DashboardComponent },
+  { path: '', component: UserComponent ,
+  children:[
+  { path: 'dashboard', component: DashboardComponent },
   { path: 'tasks/:id', component: EmpTasksComponent }
+  ]
+}
 ];
 
 @NgModule({
-  declarations: [DashboardComponent, EmpTasksComponent, CreateTaskComponent],
+  declarations: [DashboardComponent, EmpTasksComponent, CreateTaskComponent, UserComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     MatTableModule,
     MatSelectModule,
     MatDialogModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatListModule,
     HttpClientModule,
     RouterModule.forChild(userRoutes)
   ],

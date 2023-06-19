@@ -1,0 +1,29 @@
+.container {
+    height: 100vh;  // Set the height of the container to fill the viewport
+  }
+  
+  mat-sidenav {
+    width: 250px;  // Set the width of the sidenav
+  }
+  
+  mat-sidenav-content {
+    padding: 16px;  // Add padding to the main content area
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  mat-sidenav {
+    width: 200px;
+    max-width: 200px;
+  }
+  
+  mat-sidenav-content {
+    flex: 1;
+  }
+
+  .cursor{
+    cursor: pointer;
+  }
