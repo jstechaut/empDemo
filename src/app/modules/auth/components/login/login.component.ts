@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
         return;
       }
       this.isDisabled = true;
-      if(this.loginForm.value.username === 'fingent' && this.loginForm.value.password === 'fingent'){
+      if(this.loginForm.value.username === '123456' && this.loginForm.value.password === '123456'){
            localStorage.setItem('empToken', '123456')
            this.router.navigate(['/emp/dashboard']);
       } else{
